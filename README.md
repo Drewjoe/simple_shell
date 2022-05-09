@@ -1,6 +1,6 @@
 ## Simple Shell
 
-_Introduction_
+**_Introduction_**
 
 This is an ALX SE Project. The project consist in writing a shell like sh (Bourne Shell) by Stephen Bourne, in C, using a limited number of standard library functions.
 
@@ -15,7 +15,7 @@ The goal in this project was to make us understand;
 - How to suspend the execution of a process until one of its children terminates
 - What is EOF / “end-of-file”?
 
-## Allowed functions and Sysytem Calls
+## Allowed functions and System Calls
 
 - access (man 2 access)
 - chdir (man 2 chdir)
