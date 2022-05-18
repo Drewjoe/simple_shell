@@ -4,5 +4,5 @@
 int main()
 {
     write(2, "ALX Task 0 file", 15);
-    return 0;
+    return 1;
 }
