@@ -3,6 +3,6 @@
 
 int main(void)
 {
-    write(2, "ALX Task 0 file", 15);
+    write(2, "\n ALX Task 0 file\n", 18);
     return 1;
 }
