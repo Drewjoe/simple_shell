@@ -10,4 +10,4 @@ int main() {
 
   printf("The sum of a, b, and c is %f.", sum);
   return 0;
-}0.
+}
