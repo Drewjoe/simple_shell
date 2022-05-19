@@ -25,10 +25,13 @@ void execute(char **argv);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 /** INPUT FUNC */
-
-char prompt(char *s);
+char prompt(void);
 void signal_to_handel(int sig);
-char *_getline(void);
+int *_getline(void);
+
+/** STRING FUNC */
+unsigned int check_delim(char c, const char *str);
+char *_strtok(char *str, const char *delim);
 
 
 extern char **environ;
@@ -84,14 +87,8 @@ extern char **environ;
 #define DELIM " \t\r\n\a"
 #define PRINTER(c) (write(STDOUT_FILENO, c, _strlen(c)))
 
-/** USED LIBS */
-
-
-
 /** STRING FUNC */
 
-char *_strtok(char *str, const char *tok);
-unsigned int check_delim(char c, const char *str);
 char *_strncpy(char *dest, char *src, int n);
 int _strlen(char *s);
 int _putchar(char c);
