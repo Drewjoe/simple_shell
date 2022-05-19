@@ -1,5 +1,12 @@
 # This file lists all individuals having contributed content to the repository.
 # For how it is generated, see `hack/generate-authors.sh`.
+<<<<<<< HEAD
 
 Joseph Andrew <andrewjose711@gmail.com>
 Oliveth Ndubuka <ndubukaliveth@gmail.com>
+=======
+
+Joseph Andrew <andrewjose711@gmail.com>
+Oliveth Ndubuka <ndubukaliveth@gmail.com>
+
+>>>>>>> 5e5e9a74bd2f8bfb10e121d296077721f2b55711
