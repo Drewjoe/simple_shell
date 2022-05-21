@@ -1,19 +1,20 @@
-#include <shell.h>
+#include "shell.h"
 
 /**
- * args - prints all args passed to it
+ * args - prints all arguments passed to it
  * @av: NULL terminated array of strings
  * @ac: number of items in av, unused arg
- * @return: Number of argument passed
+ * @_attribute_((unused): for arg ac
+ * Return: Always 0
  */
 int args(int ac _attribute_((unused)), char *av[])
 {
-    int i;
+	int i;
 
-    for (i = 0; *av != NULL; i++)
-    {
-        printf("%s\n", *av);
-        av++;
-    }
-    return(0);
+	for (i = 0; *av != NULL; i++)
+	{
+		printf("%s\n", *av);
+		av++;
+	}
+	return (0);
 }
