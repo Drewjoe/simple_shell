@@ -20,7 +20,6 @@ int _strlen(char *s);
 char *_strdup(char *str);
 char *concat_all(char *name, char *sep, char *value);
 
-char **splstr(char *str, const char *delim);
 void execute(char **argv);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
@@ -28,6 +27,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 char prompt(void);
 void signal_to_handel(int sig);
 int *_getline(void);
+int args(int ac _attribute_((unused)), char *av[]);
 
 /** STRING FUNC */
 unsigned int check_delim(char c, const char *str);
