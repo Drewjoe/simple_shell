@@ -1,9 +1,9 @@
 #include <shell.h>
 
 /**
- * main - accepts arg
- * @ac: _attribute_
- * @av: Null terminated string pointer
+ * args - prints all args passed to it
+ * @av: NULL terminated array of strings
+ * @ac: number of items in av, unused arg
  * @return: Number of argument passed
  */
 int args(int ac _attribute_((unused)), char *av[])
