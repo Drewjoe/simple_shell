@@ -1,11 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
-#define ac i
+#include <shell.h>
 
-int main(int ac, char *av[])
+/**
+ * main - accepts arg
+ * @ac: _attribute_
+ * @av: Null terminated string pointer
+ * @return: Number of argument passed
+ */
+int args(int ac _attribute_((unused)), char *av[])
 {
-    // int i;
-    
+    int i;
+
     for (i = 0; *av != NULL; i++)
     {
         printf("%s\n", *av);
