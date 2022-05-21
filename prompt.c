@@ -2,7 +2,7 @@
 
 /**
  * prompt - Displays shell prompt
- * void
+ * void: no arg is passed
  * return: char
  */
 char prompt(void)
