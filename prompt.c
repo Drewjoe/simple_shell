@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * prompt - Displays shell prompt
+ * prompt - Displays shell prompt to accept arg
  * void: no arg is passed
  * Return: char
  */
