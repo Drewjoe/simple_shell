@@ -14,10 +14,6 @@
 #include <fcntl.h>
 #include <limits.h>
 
-int _putchar(char c);
-void _puts(char *str);
-int _strlen(char *s);
-char *_strdup(char *str);
 char *concat_all(char *name, char *sep, char *value);
 
 void execute(char **argv);
@@ -32,6 +28,21 @@ int args(int ac _attribute_((unused)), char *av[]);
 /** STRING FUNC */
 unsigned int check_delim(char c, const char *str);
 char *_strtok(char *str, const char *delim);
+
+/** PARSER & EXTRACTOR */
+int check_builtin(char **cmd, int er);
+int check_cmd(char **tokens, char *line, int count, char **argv);
+
+/**
+ * struct builtin - pointer to function with corresponding buildin command
+ * @name: pointer to char
+ * @func: fun to excute when builtin is true
+ */
+typedef struct  builtin
+{
+	char *name;
+	int (*func)(char **line, int er);
+} bul_t;
 
 
 extern char **environ;
@@ -53,16 +64,6 @@ list_path *add_node_end(list_path **head, char *str);
 list_path *linkpath(char *path);
 char *_which(char *filename, list_path *head);
 
-/**
- * struct mybuild - pointer to function with corresponding buildin command
- * @name: buildin command
- * @func: execute the buildin command
- */
-typedef struct mybuild
-{
-	char *name;
-	void (*func)(char **);
-} mybuild;
 
 void(*checkbuild(char **arv))(char **arv);
 int _atoi(char *s);
@@ -120,12 +121,10 @@ void free_all(char **input, char *line);
 int path_cmd(char **line);
 char *_getenv(char *name);
 char **parse_cmd(char *cmd);
-int handle_builtin(char **cmd, int er);
 void read_file(char *filename, char **argv);
 char *build(char *token, char *value);
 int check_builtin(char **cmd);
 void creat_envi(char **envi);
-int check_cmd(char **tokens, char *line, int count, char **argv);
 void treat_file(char *line, int counter, FILE *fd, char **argv);
 void exit_bul_for_file(char **cmd, char *line, FILE *fd);
 
@@ -147,15 +146,6 @@ void print_number_in(int n);
 void print_error(char *line, int c, char **argv);
 void _prerror(char **argv, int c, char **cmd);
 
-/**
- * struct bulltin - contain bultin to handle and function to excute
- * @command:pointer to char
- * @fun:fun to excute when bultin true
- */
-typedef struct  bulltin
-{
-	char *command;
-	int (*fun)(char **line, int er);
-} bul_t;
+
 
 #endif
